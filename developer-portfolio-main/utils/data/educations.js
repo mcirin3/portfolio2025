@@ -1,15 +1,15 @@
 export const educations = [
   {
     id: 1,
-    title: "Associates Degree",
-    duration: "2020 - 2022",
-    institution: "Oakton College",
+    title: "Bachelors Degree",
+    duration: "2022 - 2025",
+    institution: "University of Illinois Chicago",
   },
   {
     id: 2,
-    title: "High School Diploma",
-    duration: "2016 - 2020",
-    institution: "Niles West High School",
+    title: "Associates Degree",
+    duration: "2020 - 2022",
+    institution: "Oakton College",
   },
  
 ]
