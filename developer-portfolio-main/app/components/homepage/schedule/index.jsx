@@ -10,9 +10,10 @@ const GlowCard = dynamic(() => import("../../helper/glow-card"), { ssr: false })
 
 // Mock CSV data (replace with actual CSV loading logic)
 const csvData = `Day,Time,Course,Location
-MWF,9:30 AM - 10:45 AM,CS 421: Natural Language Processing, LC1
-MWF,2:00 PM - 2:50 PM, CS 442: Software Engineering II , BSB 145
-T, 10:00 AM - 1:50 PM, CS 211 Lab Proctoring, SELE 2263
+MWF, 2:00 PM - 2:50 PM, CS 442: Software Engineering II , BSB 145
+MWF, 3:30 PM - 4:45 PM,CS 422: User Interface & Design Programming, TBH 180G
+MWF, 5:00 PM - 6:15 PM,CS 494: Mobile Robotics for CS, TBH 180G
+T, 11:00 AM - 1:50 PM, CS 211 Lab Proctoring, SELE 2263
 W, 11:15 AM - 1:15 PM,CS 211 Office Hours, CS Lounge
 S, 8:00 - 9:00 PM,CS 211 Office Hours, (ONLINE via Zoom)`;
 
