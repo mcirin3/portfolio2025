@@ -92,9 +92,19 @@ function Schedule() {
                   </tr>
                 ))}
               </tbody>
-            </table>
+            </table> 
+            
           </div>
         </GlowCard>
+        <button> 
+          <a 
+            href="https://oh-signin-queue.vercel.app" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="mt-4 inline-block bg-[#1a1443] text-white text-sm sm:text-base font-medium py-2 px-6 rounded-lg hover:bg-violet-700 transition-colors duration-300"
+          >
+            Office Hours Queue
+</a></button>
       </div>
     </div>
   );
