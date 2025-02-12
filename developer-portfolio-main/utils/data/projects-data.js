@@ -21,7 +21,7 @@ export const projectsData = [
     {
         id: 3,
         name: 'Flash AI',
-        description: 'My team built an AI-based real estate app using Replicate API and OpenAI. We used Express, Typescript, OpenAI, Replicate, Stripe, and Mongoose to develop the API. We utilized NextJS, Formik, TailwindCSS, and other npm libraries for the UI. We have trained multiple AI assistants using the latest GPT model and integrated Replicate API for image processing. We added role-based auth, subscription plans, Cron job scheduling, and payment integration with Stripe.',
+        description: 'My team built an AI-based SaaS using Replicate API and OpenAI. We used Express, NextJS, OpenAI, Replicate, Stripe, and Mongoose to develop the service. We utilized NextJS, Formik, TailwindCSS, and other npm libraries for the UI. We have given the user the ability to make their own flashcards with the help of prompts to send to our chatbot. We added subscription plans and payment integration with Stripe.',
         tools: ['NextJS', 'Bootstrap', 'SCSS', 'Stripe', 'Express', 'TypeScript', 'MongoDB', 'Azure Blob', 'OpenAI API'],
         code: '',
         role: 'Full Stack Developer',
