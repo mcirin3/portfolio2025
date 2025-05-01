@@ -11,9 +11,9 @@ export const projectsData = [
     },
     {
         id: 2,
-        name: 'Date Planner App',
-        description: 'I have designed and developed a full-stack web app for couples who cannot decide on what they want to do for a dates. I created the UI using NextJS, Typescript, MUI, TailwindCSS, Google Maps, Sun-Editor, and React Slick.',
-        tools: ['NextJS', 'Tailwind CSS', "Google Maps", "NestJS", "TypeScript", "MySQL", "AWS S3", "Sun-Editor", "Gmail Passkey"],
+        name: 'Pokemon TCG Application',
+        description: 'I have designed and implemented a application that is designed to help Pokemon Trading Card Game enthusiasts find the direct market price for cards that they pull. I created the UI using NextJS, MUI, and TailwindCSS.',
+        tools: ['NextJS', 'Tailwind CSS', "MaterialUI"],
         role: 'Full Stack Developer',
         code: '',
         demo: '',
@@ -29,12 +29,12 @@ export const projectsData = [
     },
     {
         id: 4,
-        name: 'Backend API',
-        description: "This past Fall semester, I had the opportunity to create my own backend API. The API included a MySQL and MongoDB instance where I was able to create multiple endpoints that supported different HTTP requests such as GET, POST, PUT, and DELETE.",
-        tools: ['Express', 'MongoDB', 'MySQL'],
+        name: 'Pothole Detection System',
+        description: "For this Spring Semester, I had the final opportunity to work with a team to create a Pothole Detection System application. The application includes a web page where users can send in photos/videos of potholes that would come from their dashcams.",
+        tools: ['Express', 'React', 'SQLite3', 'AWS', 'Flask'],
         code: '',
         demo: '',
-        role: 'Backend Developer, Database Designer',
+        role: 'Full-Stack Developer',
     }
 ];
 
