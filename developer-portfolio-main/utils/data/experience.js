@@ -3,7 +3,7 @@ export const experiences = [
     id: 1,
     title: 'Undergraduate Teaching Assistant',
     company: "UIC",
-    duration: "(Aug 2024 - Present)"
+    duration: "(Aug 2024 - May 2025)"
   },
   {
     id: 2,

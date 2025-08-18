@@ -20,9 +20,9 @@ export const projectsData = [
     },
     {
         id: 3,
-        name: 'Flash AI',
-        description: 'My team built an AI-based SaaS using Replicate API and OpenAI. We used Express, NextJS, OpenAI, Replicate, Stripe, and Mongoose to develop the service. We utilized NextJS, Formik, TailwindCSS, and other npm libraries for the UI. We have given the user the ability to make their own flashcards with the help of prompts to send to our chatbot. We added subscription plans and payment integration with Stripe.',
-        tools: ['NextJS', 'Bootstrap', 'SCSS', 'Stripe', 'Express', 'TypeScript', 'MongoDB', 'Azure Blob', 'OpenAI API'],
+        name: 'NFL Football Fantasy Lineup Optimizer',
+        description: 'This project utilizes machine learning to create an optimal ESPN Fantasy Football lineup on Streamlit. It integrates ESPN data with a custom predictive model to help users optimize, compare, and experiment their lineups for week to week matchups against league opponents. ',
+        tools: ['Streamlit', 'Python', 'PuLP (linear programming)', 'ESPN APIs'],
         code: '',
         role: 'Full Stack Developer',
         demo: '',

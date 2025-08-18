@@ -1,8 +1,8 @@
 export const personalData = {
   name: "MARK CIRINEO",
   profile: '/profile.png',
-  designation: "Undergraduate Student",
-  description: "My name is MARK CIRINEO. I am a undergraduate student at the University of Illinois Chicago.I am a quick learner with a self-learning attitude. I love to learn and explore new technologies and am passionate about problem-solving. I love almost all the stacks of web application development and love to make the web more open to the world. My core skill is based on JavaScript and I love to do most of the things using JavaScript. I am available for any kind of job opportunity that suits my skills and interests.",
+  designation: "Innovator",
+  description: "My name is Mark Cirineo, and I am a recent graduate of the University of Illinois Chicago. I am an enthusiastic and driven learner with a strong passion for exploring new technologies and solving complex problems. With a core skill set in JavaScript and hands-on experience across multiple stacks of web application development, I enjoy building applications that make the web more open, accessible, and impactful. My curiosity and eagerness to grow push me to continuously expand my technical knowledge and refine my problem-solving abilities.",
   email: 'mcirineo9@gmail.com',
   phone: '2246160276',
   address: '851 S Morgan St ',
