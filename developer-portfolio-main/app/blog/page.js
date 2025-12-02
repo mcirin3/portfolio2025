@@ -1,18 +1,26 @@
 // @flow strict
 
-import { personalData } from "@/utils/data/personal-data";
 import BlogCard from "../components/homepage/blog/blog-card";
 
+export const dynamic = "force-dynamic";
+
 async function getBlogs() {
-  const res = await fetch(`https://dev.to/api/articles?username=${personalData.devUsername}`)
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || ""}/api/posts`, {
+      cache: "no-store",
+      next: { revalidate: 0 },
+    });
 
-  if (!res.ok) {
-    throw new Error('Failed to fetch data')
+    if (!res.ok) {
+      return [];
+    }
+
+    const data = await res.json();
+    return Array.isArray(data) ? data : [];
+  } catch (error) {
+    return [];
   }
-
-  const data = await res.json();
-  return data;
-};
+}
 
 async function page() {
   const blogs = await getBlogs();
@@ -29,16 +37,25 @@ async function page() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 lg:gap-8 xl:gap-10">
-        {
-          blogs.map((blog, i) => (
-            blog?.cover_image &&
-            <BlogCard blog={blog} key={i} />
-          ))
-        }
-      </div>
+      {blogs.length === 0 ? (
+        <div className="text-center text-white/70">No blogs available right now. Please check back soon.</div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 lg:gap-8 xl:gap-10">
+          {blogs.map(
+            (blog, i) => (
+              <BlogCard blog={{
+                ...blog,
+                cover_image: blog.cover_url,
+                title: blog.title,
+                description: blog.summary,
+                url: `/blog/${blog.slug}`,
+              }} key={i} />
+            )
+          )}
+        </div>
+      )}
     </div>
   );
-};
+}
 
 export default page;

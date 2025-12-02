@@ -1,7 +1,6 @@
 "use client";
 
 // @flow strict
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 

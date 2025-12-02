@@ -6,16 +6,17 @@ import Image from "next/image";
 
 function AboutSection() {
   return (
-    <div id="about" className="my-12 lg:my-16 relative">
+    <div id="about" className="my-12 lg:my-16 relative overflow-hidden">
+      <div className="pointer-events-none absolute -left-16 top-10 h-48 w-48 rounded-full bg-gradient-to-br from-[#1d4f91]/25 to-[#d50032]/30 blur-3xl" />
       <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8">
-        <span className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md">
+        <span className="bg-[#0C2340] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md">
           ABOUT ME
         </span>
-        <span className="h-36 w-[2px] bg-[#1a1443]"></span>
+        <span className="h-36 w-[2px] bg-[#0C2340]"></span>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         <div className="order-2 lg:order-1">
-          <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
+          <p className="font-medium mb-5 text-[#d50032] text-xl uppercase">
             Who I am?
           </p>
           <p className="text-gray-200 text-sm lg:text-lg">

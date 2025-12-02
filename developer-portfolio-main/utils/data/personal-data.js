@@ -8,7 +8,7 @@ export const personalData = {
   address: '851 S Morgan St ',
   github: 'https://github.com/mcirin3',
   facebook: 'https://www.facebook.com/mcirineo9/',
-  linkedIn: 'https://www.linkedin.com/in/mark-cirineo22365/',
+  linkedIn: 'https://www.linkedin.com/in/mark-cirineo-65248b175/',
   twitter: 'https://twitter.com/mcirineo9',
   stackOverflow: 'https://stackoverflow.com/users/16840768/mcirineo',
   leetcode: "https://leetcode.com/mcirineo9/",

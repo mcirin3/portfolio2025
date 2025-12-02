@@ -11,98 +11,123 @@ import { SiLeetcode } from "react-icons/si";
 
 function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center justify-between py-4 lg:py-12">
-      <Image
-        src="/hero.svg"
-        alt="Hero"
-        width={1572}
-        height={795}
-        className="absolute -top-[98px] -z-10"
-      />
+    <section className="relative overflow-hidden py-6 lg:py-12">
+      <div className="pointer-events-none absolute -top-24 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-gradient-to-br from-[#0c2340]/60 via-[#1d4f91]/40 to-[#d50032]/35 blur-3xl" />
+      <div className="pointer-events-none absolute -left-20 top-16 h-64 w-64 rounded-full bg-[#1d4f91]/18 blur-3xl" />
+      <div className="pointer-events-none absolute -right-12 bottom-0 h-64 w-64 rounded-full bg-[#d50032]/16 blur-3xl" />
 
-      <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-8">
-        <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
-          <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
-            Hello, <br />
-            My Name is {' '}
-            <span className=" text-pink-500">{personalData.name}.</span>
-            {`  I'm an  `}
-            <span className=" text-[#42acdc]">{personalData.designation}</span>
-            .
-          </h1>
-
-          <div className="my-12 flex items-center gap-5">
-            <Link
-              href={personalData.github}
-              target='_blank'
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <BsGithub size={30} />
-            </Link>
-            <Link
-              href={personalData.linkedIn}
-              target='_blank'
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <BsLinkedin size={30} />
-            </Link>
-            <Link
-              href={personalData.facebook}
-              target='_blank'
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <FaFacebook size={30} />
-            </Link>
-            <Link
-              href={personalData.leetcode}
-              target='_blank'
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <SiLeetcode size={30} />
-            </Link>
-            <Link
-              href={personalData.twitter}
-              target='_blank'
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <FaTwitterSquare size={30} />
-            </Link>
+      <div className="grid grid-cols-1 items-start gap-y-10 lg:grid-cols-2 lg:gap-12">
+        <div className="order-2 flex flex-col items-start justify-center space-y-6 rounded-3xl border border-white/5 bg-white/5 p-6 backdrop-blur-2xl lg:order-1 lg:p-8">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.22em] text-[#d50032]">
+            <span className="h-2 w-2 rounded-full bg-[#d50032] shadow-[0_0_0_6px_rgba(213,0,50,0.16)]" />
+            Building the next wave
           </div>
 
-          <div className="flex items-center gap-3">
-            <Link href="#contact" className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300 hover:from-pink-500 hover:to-violet-600">
-              <button className="px-3 text-xs md:px-8 py-3 md:py-4 bg-[#0d1224] rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-1 hover:gap-3">
-                <span>Contact me</span>
-                <RiContactsFill size={16} />
-              </button>
+          <h1 className="text-3xl font-semibold leading-tight text-white md:text-4xl lg:text-5xl lg:leading-[3.4rem]">
+            Hey, I&apos;m <span className="text-[#1d4f91]">{personalData.name}</span> -{" "}
+            <span className="text-[#d50032]">{personalData.designation}</span> crafting thoughtful
+            products for the modern web.
+          </h1>
+
+          <p className="text-base text-white/70 lg:text-lg">
+            I blend full-stack engineering with a UX-first mindset to deliver performant,
+            accessible experiences. Let&apos;s build something that feels as good as it ships.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.12em] text-white/60">
+            {["Full-stack JavaScript", "Cloud curious", "UI polish believer"].map((pill) => (
+              <span
+                key={pill}
+                className="rounded-full border border-white/10 bg-white/10 px-3 py-2 text-[0.7rem] backdrop-blur"
+              >
+                {pill}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3">
+            <Link
+              href="/contact"
+              className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#0d1224] px-4 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-white transition-all duration-200 hover:border-[#d50032] hover:text-[#d50032]"
+            >
+              <span>Contact me</span>
+              <RiContactsFill size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
             </Link>
 
-            <Link className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-3 md:px-8 py-3 md:py-4 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold" role="button" target="_blank" href={personalData.resume}
+            <Link
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d50032] via-[#e8414c] to-[#1d4f91] px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.12em] text-white shadow-[0_15px_80px_-35px_rgba(13,35,64,0.9)] transition-transform duration-200 hover:-translate-y-0.5"
+              role="button"
+              target="_blank"
+              href={personalData.resume}
             >
               <span>Get Resume</span>
               <MdDownload size={16} />
             </Link>
+            <Link
+              className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.12em] text-white transition-colors duration-200 hover:border-[#d50032] hover:text-[#d50032]"
+              href="/projects"
+            >
+              View projects
+            </Link>
           </div>
 
+          <div className="mt-4 flex items-center gap-4">
+            <Link
+              href={personalData.github}
+              target="_blank"
+              className="transition-all text-white/70 hover:text-[#1d4f91] hover:-translate-y-0.5 duration-200"
+            >
+              <BsGithub size={26} />
+            </Link>
+            <Link
+              href={personalData.linkedIn}
+              target="_blank"
+              className="transition-all text-white/70 hover:text-[#1d4f91] hover:-translate-y-0.5 duration-200"
+            >
+              <BsLinkedin size={26} />
+            </Link>
+            <Link
+              href={personalData.facebook}
+              target="_blank"
+              className="transition-all text-white/70 hover:text-[#1d4f91] hover:-translate-y-0.5 duration-200"
+            >
+              <FaFacebook size={26} />
+            </Link>
+            <Link
+              href={personalData.leetcode}
+              target="_blank"
+              className="transition-all text-white/70 hover:text-[#1d4f91] hover:-translate-y-0.5 duration-200"
+            >
+              <SiLeetcode size={24} />
+            </Link>
+            <Link
+              href={personalData.twitter}
+              target="_blank"
+              className="transition-all text-white/70 hover:text-[#1d4f91] hover:-translate-y-0.5 duration-200"
+            >
+              <FaTwitterSquare size={26} />
+            </Link>
+          </div>
         </div>
-        <div className="order-1 lg:order-2 from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37]">
+
+        <div className="relative order-1 rounded-3xl border border-white/5 bg-gradient-to-b from-white/10 via-white/0 to-white/5 shadow-[0_30px_120px_-50px_rgba(0,0,0,0.9)] lg:order-2">
           <div className="flex flex-row">
-            <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
-            <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
+            <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#d50032] to-[#1d4f91]" />
+            <div className="h-[1px] w-full bg-gradient-to-r from-[#1d4f91] to-transparent" />
           </div>
           <div className="px-4 lg:px-8 py-5">
             <div className="flex flex-row space-x-2">
-              <div className="h-3 w-3 rounded-full bg-red-400"></div>
-              <div className="h-3 w-3 rounded-full bg-orange-400"></div>
-              <div className="h-3 w-3 rounded-full bg-green-200"></div>
+              <div className="h-3 w-3 rounded-full bg-red-400" />
+              <div className="h-3 w-3 rounded-full bg-orange-400" />
+              <div className="h-3 w-3 rounded-full bg-green-200" />
             </div>
           </div>
-          <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
-            <code className="font-mono text-xs md:text-sm lg:text-base">
+          <div className="overflow-hidden border-t border-white/5 px-4 py-4 lg:px-8 lg:py-8">
+            <code className="font-mono text-xs md:text-sm lg:text-base leading-6 text-white/80">
               <div className="blink">
-                <span className="mr-2 text-pink-500">const</span>
+                <span className="mr-2 text-[#d50032]">const</span>
                 <span className="mr-2 text-white">coder</span>
-                <span className="mr-2 text-pink-500">=</span>
+                <span className="mr-2 text-[#d50032]">=</span>
                 <span className="text-gray-400">{'{'}</span>
               </div>
               <div>
@@ -173,15 +198,21 @@ function HeroSection() {
                 <span className="mr-2 text-amber-300">&gt;=</span>
                 <span className="text-orange-400">5</span>
               </div>
-              <div><span className="ml-8 lg:ml-16 mr-2 text-gray-400">{`);`}</span></div>
-              <div><span className="ml-4 lg:ml-8 text-gray-400">{`};`}</span></div>
-              <div><span className="text-gray-400">{`};`}</span></div>
+              <div>
+                <span className="ml-8 lg:ml-16 mr-2 text-gray-400">{`);`}</span>
+              </div>
+              <div>
+                <span className="ml-4 lg:ml-8 text-gray-400">{`};`}</span>
+              </div>
+              <div>
+                <span className="text-gray-400">{`};`}</span>
+              </div>
             </code>
           </div>
         </div>
       </div>
     </section>
   );
-};
+}
 
 export default HeroSection;
