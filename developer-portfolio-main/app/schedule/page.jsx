@@ -12,7 +12,7 @@ export default function SchedulePage() {
       <PageHeader
         eyebrow="Schedule"
         title="See what I'm working on and where you can find me."
-        subtitle="Keep up with office hours, speaking engagements, and the weekly cadence I use to stay organized."
+        subtitle="Keep up with appointments, speaking engagements, and the weekly cadence I use to stay organized."
         ctaLabel="Book time"
         ctaHref="/contact"
       />
