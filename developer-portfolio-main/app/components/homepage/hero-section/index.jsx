@@ -12,9 +12,9 @@ import { SiLeetcode } from "react-icons/si";
 function HeroSection() {
   return (
     <section className="relative overflow-hidden py-6 lg:py-12">
-      <div className="pointer-events-none absolute -top-24 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-gradient-to-br from-[#0c2340]/60 via-[#1d4f91]/40 to-[#d50032]/35 blur-3xl" />
-      <div className="pointer-events-none absolute -left-20 top-16 h-64 w-64 rounded-full bg-[#1d4f91]/18 blur-3xl" />
-      <div className="pointer-events-none absolute -right-12 bottom-0 h-64 w-64 rounded-full bg-[#d50032]/16 blur-3xl" />
+      <div className="pointer-events-none absolute -top-24 left-1/2 hidden h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-gradient-to-br from-[#0c2340]/60 via-[#1d4f91]/40 to-[#d50032]/35 blur-3xl md:block" />
+      <div className="pointer-events-none absolute -left-20 top-16 hidden h-64 w-64 rounded-full bg-[#1d4f91]/18 blur-3xl md:block" />
+      <div className="pointer-events-none absolute -right-12 bottom-0 hidden h-64 w-64 rounded-full bg-[#d50032]/16 blur-3xl md:block" />
 
       <div className="grid grid-cols-1 items-start gap-y-10 lg:grid-cols-2 lg:gap-12">
         <div className="order-2 flex flex-col items-start justify-center space-y-6 rounded-3xl border border-white/5 bg-white/5 p-6 backdrop-blur-2xl lg:order-1 lg:p-8">
