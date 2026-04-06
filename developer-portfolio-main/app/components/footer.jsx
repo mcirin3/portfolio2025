@@ -8,7 +8,7 @@ function Footer() {
     <div className="relative border-t border-white/5 bg-white/5 text-white backdrop-blur-xl">
       <div className="mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] py-6 lg:py-10">
         <div className="flex justify-center -z-40">
-          <div className="absolute top-0 h-[1px] w-1/2 bg-gradient-to-r from-transparent via-[#d50032] to-transparent" />
+          <div className="absolute top-0 h-[1px] w-1/2 bg-gradient-to-r from-transparent via-[#00e5ff] to-transparent" />
         </div>
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-sm text-white/70">
@@ -16,7 +16,7 @@ function Footer() {
             <Link
               target="_blank"
               href="https://www.linkedin.com/in/mark-cirineo-65248b175/"
-              className="text-[#d50032] transition-colors duration-200 hover:text-[#1d4f91]"
+              className="text-[#00e5ff] transition-colors duration-200 hover:text-[#6e7bff]"
             >
               Mark Cirineo
             </Link>
@@ -25,7 +25,7 @@ function Footer() {
             <Link
               target="_blank"
               href="https://github.com/mcirin3/portfolio2025"
-              className="flex items-center gap-2 uppercase transition-colors duration-200 hover:text-[#d50032]"
+              className="flex items-center gap-2 uppercase transition-colors duration-200 hover:text-[#00e5ff]"
             >
               <IoStar />
               <span>Star</span>
@@ -33,7 +33,7 @@ function Footer() {
             <Link
               target="_blank"
               href="https://github.com/mcirin3/portfolio2025/fork"
-              className="flex items-center gap-2 uppercase transition-colors duration-200 hover:text-[#d50032]"
+              className="flex items-center gap-2 uppercase transition-colors duration-200 hover:text-[#00e5ff]"
             >
               <CgGitFork />
               <span>Fork</span>

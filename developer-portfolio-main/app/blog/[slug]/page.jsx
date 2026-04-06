@@ -23,7 +23,7 @@ export default async function BlogDetail({ params }) {
   if (!post) {
     return (
       <div className="py-12 text-center text-white/70">
-        Post not found. <Link href="/blog" className="text-[#d50032] underline">Back to blog</Link>
+        Post not found. <Link href="/blog" className="text-[#00e5ff] underline">Back to blog</Link>
       </div>
     );
   }

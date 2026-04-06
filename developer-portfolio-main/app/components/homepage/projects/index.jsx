@@ -1,5 +1,5 @@
 import { projectsData } from '@/utils/data/projects-data';
-import ProjectCard from './project-card';
+import PokedexProjectCard from './pokedex-project-card';
 
 const Projects = () => {
 
@@ -18,8 +18,8 @@ const Projects = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 xl:gap-10">
         {projectsData.slice(0, 6).map((project, index) => (
           <div key={index} className="w-full">
-            <div className="box-border flex h-full items-stretch rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s]">
-              <ProjectCard project={project} />
+            <div className="box-border flex h-full items-stretch rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s] hover:shadow-[0_0_50px_0_rgba(var(--primary-rgb),0.2)]">
+              <PokedexProjectCard project={project} />
             </div>
           </div>
         ))}

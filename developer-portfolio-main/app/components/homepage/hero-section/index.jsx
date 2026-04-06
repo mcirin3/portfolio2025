@@ -8,24 +8,48 @@ import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
+import TrainerCard from "../../helper/trainer-card";
+import PokemonTypeBadge from "../../helper/pokemon-type-badge";
 
 function HeroSection() {
+  const trainerStats = [
+    { value: '5+', label: 'Years' },
+    { value: '20+', label: 'Projects' },
+    { value: '150+', label: 'Skills' },
+    { value: '∞', label: 'Passion' },
+  ];
+
   return (
     <section className="relative overflow-hidden py-6 lg:py-12">
-      <div className="pointer-events-none absolute -top-24 left-1/2 hidden h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-gradient-to-br from-[#0c2340]/60 via-[#1d4f91]/40 to-[#d50032]/35 blur-3xl md:block" />
-      <div className="pointer-events-none absolute -left-20 top-16 hidden h-64 w-64 rounded-full bg-[#1d4f91]/18 blur-3xl md:block" />
-      <div className="pointer-events-none absolute -right-12 bottom-0 hidden h-64 w-64 rounded-full bg-[#d50032]/16 blur-3xl md:block" />
+      {/* Floating Pokéballs Background */}
+      {[...Array(3)].map((_, i) => (
+        <div
+          key={i}
+          className="pokeball pokeball-float"
+          style={{
+            width: `${60 + i * 40}px`,
+            height: `${60 + i * 40}px`,
+            top: `${20 + i * 25}%`,
+            left: `${10 + i * 35}%`,
+            animationDelay: `${i * 6}s`,
+          }}
+        />
+      ))}
+
+      <div className="pointer-events-none absolute -top-24 left-1/2 hidden h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-gradient-to-br from-[#111827]/60 via-[var(--secondary-color)]/40 to-[var(--primary-color)]/35 blur-3xl md:block" />
+      <div className="pointer-events-none absolute -left-20 top-16 hidden h-64 w-64 rounded-full bg-[var(--secondary-color)]/18 blur-3xl md:block" />
+      <div className="pointer-events-none absolute -right-12 bottom-0 hidden h-64 w-64 rounded-full bg-[var(--primary-color)]/16 blur-3xl md:block" />
 
       <div className="grid grid-cols-1 items-start gap-y-10 lg:grid-cols-2 lg:gap-12">
         <div className="order-2 flex flex-col items-start justify-center space-y-6 rounded-3xl border border-white/5 bg-white/5 p-6 backdrop-blur-2xl lg:order-1 lg:p-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.22em] text-[#d50032]">
-            <span className="h-2 w-2 rounded-full bg-[#d50032] shadow-[0_0_0_6px_rgba(213,0,50,0.16)]" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.22em] text-[var(--primary-color)]">
+            <span className="h-2 w-2 rounded-full bg-[var(--primary-color)] shadow-[0_0_0_6px_rgba(var(--primary-rgb),0.18)]" />
             Building the next wave
           </div>
 
           <h1 className="text-3xl font-semibold leading-tight text-white md:text-4xl lg:text-5xl lg:leading-[3.4rem]">
-            Hey, I&apos;m <span className="text-[#1d4f91]">{personalData.name}</span> -{" "}
-            <span className="text-[#d50032]">{personalData.designation}</span> crafting thoughtful
+            Hey, I&apos;m <span className="text-[var(--secondary-color)]">{personalData.name}</span> -{" "}
+            <span className="text-[var(--primary-color)]">{personalData.designation}</span> crafting thoughtful
             products for the modern web.
           </h1>
 
@@ -34,28 +58,23 @@ function HeroSection() {
             accessible experiences. Let&apos;s build something that feels as good as it ships.
           </p>
 
-          <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.12em] text-white/60">
-            {["Full-stack JavaScript", "Cloud curious", "UI polish believer"].map((pill) => (
-              <span
-                key={pill}
-                className="rounded-full border border-white/10 bg-white/10 px-3 py-2 text-[0.7rem] backdrop-blur"
-              >
-                {pill}
-              </span>
-            ))}
+          <div className="flex flex-wrap items-center gap-3">
+            <PokemonTypeBadge type="electric">Full-Stack</PokemonTypeBadge>
+            <PokemonTypeBadge type="psychic">Cloud Dev</PokemonTypeBadge>
+            <PokemonTypeBadge type="fire">UI Polish</PokemonTypeBadge>
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#0d1224] px-4 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-white transition-all duration-200 hover:border-[#d50032] hover:text-[#d50032]"
+              className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#0f121a] px-4 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-white transition-all duration-200 hover:border-[var(--primary-color)] hover:text-[var(--primary-color)]"
             >
               <span>Contact me</span>
               <RiContactsFill size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
             </Link>
 
             <Link
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d50032] via-[#e8414c] to-[#1d4f91] px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.12em] text-white shadow-[0_15px_80px_-35px_rgba(13,35,64,0.9)] transition-transform duration-200 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary-color)] via-[var(--accent-color)] to-[var(--secondary-color)] px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.12em] text-white shadow-[0_15px_80px_-35px_rgba(17,24,39,0.95)] transition-transform duration-200 hover:-translate-y-0.5"
               role="button"
               target="_blank"
               href={personalData.resume}
@@ -64,7 +83,7 @@ function HeroSection() {
               <MdDownload size={16} />
             </Link>
             <Link
-              className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.12em] text-white transition-colors duration-200 hover:border-[#d50032] hover:text-[#d50032]"
+              className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.12em] text-white transition-colors duration-200 hover:border-[var(--primary-color)] hover:text-[var(--primary-color)]"
               href="/projects"
             >
               View projects
@@ -75,35 +94,35 @@ function HeroSection() {
             <Link
               href={personalData.github}
               target="_blank"
-              className="transition-all text-white/70 hover:text-[#1d4f91] hover:-translate-y-0.5 duration-200"
+              className="transition-all text-white/70 hover:text-[var(--secondary-color)] hover:-translate-y-0.5 duration-200"
             >
               <BsGithub size={26} />
             </Link>
             <Link
               href={personalData.linkedIn}
               target="_blank"
-              className="transition-all text-white/70 hover:text-[#1d4f91] hover:-translate-y-0.5 duration-200"
+              className="transition-all text-white/70 hover:text-[var(--secondary-color)] hover:-translate-y-0.5 duration-200"
             >
               <BsLinkedin size={26} />
             </Link>
             <Link
               href={personalData.facebook}
               target="_blank"
-              className="transition-all text-white/70 hover:text-[#1d4f91] hover:-translate-y-0.5 duration-200"
+              className="transition-all text-white/70 hover:text-[var(--secondary-color)] hover:-translate-y-0.5 duration-200"
             >
               <FaFacebook size={26} />
             </Link>
             <Link
               href={personalData.leetcode}
               target="_blank"
-              className="transition-all text-white/70 hover:text-[#1d4f91] hover:-translate-y-0.5 duration-200"
+              className="transition-all text-white/70 hover:text-[var(--secondary-color)] hover:-translate-y-0.5 duration-200"
             >
               <SiLeetcode size={24} />
             </Link>
             <Link
               href={personalData.twitter}
               target="_blank"
-              className="transition-all text-white/70 hover:text-[#1d4f91] hover:-translate-y-0.5 duration-200"
+              className="transition-all text-white/70 hover:text-[var(--secondary-color)] hover:-translate-y-0.5 duration-200"
             >
               <FaTwitterSquare size={26} />
             </Link>
@@ -112,8 +131,8 @@ function HeroSection() {
 
         <div className="relative order-1 rounded-3xl border border-white/10 bg-[#0b1628]/95 shadow-[0_30px_120px_-50px_rgba(0,0,0,0.9)] sm:bg-gradient-to-b sm:from-white/10 sm:via-white/0 sm:to-white/5 lg:order-2">
           <div className="flex flex-row">
-            <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#d50032] to-[#1d4f91]" />
-            <div className="h-[1px] w-full bg-gradient-to-r from-[#1d4f91] to-transparent" />
+            <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[var(--primary-color)] to-[var(--secondary-color)]" />
+            <div className="h-[1px] w-full bg-gradient-to-r from-[var(--secondary-color)] to-transparent" />
           </div>
           <div className="px-4 lg:px-8 py-5">
             <div className="flex flex-row space-x-2">
@@ -125,9 +144,9 @@ function HeroSection() {
           <div className="overflow-hidden border-t border-white/10 bg-[#0b1628]/80 px-4 py-4 lg:px-8 lg:py-8">
             <code className="font-mono text-xs md:text-sm lg:text-base leading-6 text-white/80">
               <div className="blink">
-                <span className="mr-2 text-[#d50032]">const</span>
+                <span className="mr-2 text-[var(--primary-color)]">const</span>
                 <span className="mr-2 text-white">coder</span>
-                <span className="mr-2 text-[#d50032]">=</span>
+                <span className="mr-2 text-[var(--primary-color)]">=</span>
                 <span className="text-gray-400">{'{'}</span>
               </div>
               <div>
@@ -210,6 +229,11 @@ function HeroSection() {
             </code>
           </div>
         </div>
+      </div>
+
+      {/* Trainer Card */}
+      <div className="mt-12 lg:mt-16">
+        <TrainerCard stats={trainerStats} />
       </div>
     </section>
   );
