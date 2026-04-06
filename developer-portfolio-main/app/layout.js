@@ -14,9 +14,14 @@ export const metadata = {
   description:
     "This is the portfolio of Mark Cirineo. I am a graduate CS student and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.",
   icons: {
-    icon: "/icon.svg",
-    apple: "/apple-icon.svg",
+    icon: [
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({ children }) {

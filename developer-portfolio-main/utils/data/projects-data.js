@@ -11,9 +11,9 @@ export const projectsData = [
     },
     {
         id: 2,
-        name: 'Pokemon TCG Application',
-        description: 'I have designed and implemented a application that is designed to help Pokemon Trading Card Game enthusiasts find the direct market price for cards that they pull. I created the UI using NextJS, MUI, and TailwindCSS.',
-        tools: ['NextJS', 'Tailwind CSS', "MaterialUI"],
+        name: 'AI Recipe Generator',
+        description: 'I designed and built an AI Recipe Generator that lets users upload or capture photos of ingredients and returns possible recipe ideas based on the image. The frontend was built with TypeScript and Tailwind CSS, while the backend used Python FastAPI on AWS with S3 for photo storage and the OpenAI API for image processing and recognition.',
+        tools: ['TypeScript', 'Tailwind CSS', 'Python', 'FastAPI', 'AWS', 'S3', 'OpenAI API'],
         role: 'Full Stack Developer',
         code: '',
         demo: '',
