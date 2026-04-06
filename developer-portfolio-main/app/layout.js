@@ -15,11 +15,12 @@ export const metadata = {
     "This is the portfolio of Mark Cirineo. I am a graduate CS student and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.",
   icons: {
     icon: [
-      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
-      { url: "/favicon.ico" },
+      { url: "/favicon-32x32-v2.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16-v2.png", type: "image/png", sizes: "16x16" },
+      { url: "/favicon-v2.ico" },
     ],
-    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon-v2.ico",
+    apple: "/apple-touch-icon-v2.png",
   },
   manifest: "/site.webmanifest",
 };
