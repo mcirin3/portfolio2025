@@ -16,11 +16,14 @@ const links = [
 function Navbar() {
   const pathname = usePathname();
 
+  const isActiveLink = (href) =>
+    pathname === href || (pathname?.startsWith(href) && href !== "/");
+
   return (
     <nav className="sticky top-4 z-50">
-      <div className="flex items-center justify-between rounded-2xl border border-white/5 bg-white/5 px-4 py-3 backdrop-blur-xl shadow-[0_20px_120px_-60px_rgba(0,0,0,0.7)]">
+      <div className="flex flex-wrap items-center justify-between gap-y-3 rounded-2xl border border-white/5 bg-white/5 px-3 py-3 backdrop-blur-xl shadow-[0_20px_120px_-60px_rgba(0,0,0,0.7)] sm:px-4">
         <div className="flex flex-shrink-0 items-center">
-          <Link href="/" className="text-2xl font-bold tracking-tight text-white">
+          <Link href="/" className="text-lg font-bold tracking-tight text-white sm:text-2xl">
             <span className="bg-gradient-to-r from-[#d50032] via-[#e8414c] to-[#1d4f91] bg-clip-text text-transparent">
               MARK CIRINEO
             </span>
@@ -29,8 +32,7 @@ function Navbar() {
 
         <ul className="hidden items-center gap-2 text-sm font-medium text-white md:flex">
           {links.map((link) => {
-            const isActive =
-              pathname === link.href || (pathname?.startsWith(link.href) && link.href !== "/");
+            const isActive = isActiveLink(link.href);
 
             return (
               <li key={link.href}>
@@ -61,6 +63,27 @@ function Navbar() {
             View work
           </Link>
         </div>
+
+        <ul className="flex w-full items-center gap-2 overflow-x-auto pb-1 text-xs font-semibold uppercase tracking-[0.08em] text-white/80 md:hidden">
+          {links.map((link) => {
+            const isActive = isActiveLink(link.href);
+
+            return (
+              <li key={link.href} className="shrink-0">
+                <Link
+                  href={link.href}
+                  className={`inline-flex rounded-full border px-3 py-1.5 transition-colors duration-200 ${
+                    isActive
+                      ? "border-[#d50032]/60 bg-[#d50032]/20 text-[#ffd9e1]"
+                      : "border-white/10 bg-white/5 text-white/80"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </nav>
   );

@@ -9,6 +9,12 @@ import "./css/card.scss";
 import "./css/globals.scss";
 const inter = Inter({ subsets: ["latin"] });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export const metadata = {
   title: "Portfolio of Mark Cirineo - Software Developer",
   description:
@@ -30,7 +36,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <ToastContainer />
-        <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] py-6 lg:py-10 text-white">
+        <main className="app-shell min-h-screen relative mx-auto w-full px-4 py-5 text-white sm:px-6 md:px-10 lg:py-8">
           <Navbar />
           {children}
           <ScrollToTop />
