@@ -152,17 +152,7 @@ body {
   transform-origin: top;
   animation: tassel-swing 3.2s ease-in-out infinite;
   box-shadow: 0 0 0 4px #0c2340;
-}
-
-.uic-cap::after::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: #f8d34b;
-  border-radius: 50%;
-  top: -5px;
-  left: -4px;
+  border-radius: 999px;
 }
 
 .uic-cap-float {
