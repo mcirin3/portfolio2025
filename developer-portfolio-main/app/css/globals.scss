@@ -24,6 +24,12 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+@media (max-width: 1024px), (pointer: coarse) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
 html {
   font-size: clamp(14px, 0.45vw + 13px, 18px);
 }

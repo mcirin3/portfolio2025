@@ -110,7 +110,7 @@ function HeroSection() {
           </div>
         </div>
 
-        <div className="relative order-1 rounded-3xl border border-white/5 bg-gradient-to-b from-white/10 via-white/0 to-white/5 shadow-[0_30px_120px_-50px_rgba(0,0,0,0.9)] lg:order-2">
+        <div className="relative order-1 rounded-3xl border border-white/10 bg-[#0b1628]/95 shadow-[0_30px_120px_-50px_rgba(0,0,0,0.9)] sm:bg-gradient-to-b sm:from-white/10 sm:via-white/0 sm:to-white/5 lg:order-2">
           <div className="flex flex-row">
             <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#d50032] to-[#1d4f91]" />
             <div className="h-[1px] w-full bg-gradient-to-r from-[#1d4f91] to-transparent" />
@@ -122,7 +122,7 @@ function HeroSection() {
               <div className="h-3 w-3 rounded-full bg-green-200" />
             </div>
           </div>
-          <div className="overflow-hidden border-t border-white/5 px-4 py-4 lg:px-8 lg:py-8">
+          <div className="overflow-hidden border-t border-white/10 bg-[#0b1628]/80 px-4 py-4 lg:px-8 lg:py-8">
             <code className="font-mono text-xs md:text-sm lg:text-base leading-6 text-white/80">
               <div className="blink">
                 <span className="mr-2 text-[#d50032]">const</span>
